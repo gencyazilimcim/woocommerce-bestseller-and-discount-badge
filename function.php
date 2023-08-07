@@ -19,13 +19,11 @@ function vono_bestseller_discount_badge_product_loop()
             'orderby'         => 'meta_value_num',
             'order'           => 'DESC',
             'fields'          => 'ids',
-            // 'meta_key'      => 'total_sales',
             'meta_query'      => array(
                 array(
                     'key'         => 'total_sales',
-                    'value'       => 20, // satış adedi 20'den yüksek olanlar
+                    'value'       => 20, // those with more than 20 sales
                     'compare'     => '>',
-                    // 'type'      => 'numeric',
                 )
             )
         );
